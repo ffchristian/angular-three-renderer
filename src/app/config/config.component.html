@@ -1,0 +1,8 @@
+<form [formGroup]="geometricConfigForm" (ngSubmit)="onSubmit()">
+
+  <select formControlName="parts" class='select-option' #partsSelect (change)='onOptionsSelected(partsSelect.value)'>
+   <option class='option' *ngFor="let part of parts; let i = index" [value]="i">{{part.geometry}}</option>
+</select>
+
+  <button>Submit</button>
+</form>
