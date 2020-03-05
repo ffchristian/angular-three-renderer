@@ -5,12 +5,13 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { ConfigService } from './configService/config.service';
-import { ConfigComponent } from './config/config.component';
+import { ObjectMakerService } from './3D-object-maker/3D-object-maker.service';
+import { ObjectRendererComponent } from './3D-object-renderer/3D-object-renderer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ConfigComponent
+    ObjectRendererComponent
   ],
   imports: [
     BrowserModule,
@@ -18,7 +19,7 @@ import { ConfigComponent } from './config/config.component';
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [ConfigService],
+  providers: [ConfigService, ObjectMakerService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
