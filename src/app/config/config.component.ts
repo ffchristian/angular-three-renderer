@@ -121,8 +121,6 @@ export class ConfigComponent implements OnInit {
     this.camera.position.z = 30;
   }
 
- 
-
   onOptionsSelected(selected: number){
     this.selectedPartIndex = selected;
     this.render();
